@@ -1,7 +1,7 @@
 <?php
 
 $as = "";
-if(\steve\Laraadmin\Helpers\LAHelper::laravel_ver() >= 5.4) {
+if(\Steve\Laraadmin\Helpers\LAHelper::laravel_ver() >= 5.4) {
 	$as = config('laraadmin.adminRoute').'.';
 }
 

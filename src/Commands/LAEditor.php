@@ -21,7 +21,7 @@ class LAEditor extends Command
 	 *
 	 * @var string
 	 */
-	protected $signature = 'la:editor';
+	protected $signature = 'la:editor {level} {hostname}';
 
 	/**
 	 * The command description.
@@ -41,14 +41,18 @@ class LAEditor extends Command
 	public function handle()
 	{
 		try {
+			$level = $this->argument('level');
+            $hostname = $this->argument('hostname');
+
 			$this->info('LaraAdmin Code Editor installation started...');
 			
 			$from = base_path('vendor/steve/laeditor/src/Installs');
 			$to = base_path();
 			
 			$this->info('from: '.$from." to: ".$to);
-
-			$this->copyFile($from."/resources/views/index.blade.php", $to."/resources/views/la/editor/index.blade.php");
+            if (isset(explode(".", $hostname->fqdn)[0])&&explode(".", $hostname->fqdn)[0]!="") {
+			     $this->copyFile($from."/resources/views/index.blade.php", $to."/resources/views/".explode(".", $hostname->fqdn)[0]."/la/editor/index.blade.php");
+			}
 			$this->copyFolder($from."/la-assets/plugins/ace", $to."/public/la-assets/plugins/ace");
 			
 			$this->info("\nLaraAdmin Code Editor successfully installed.");
