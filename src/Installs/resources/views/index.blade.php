@@ -1,4 +1,4 @@
-@extends('la.layouts.app')
+@extends($hostname.'.la.layouts.app')
 
 @section('htmlheader_title')
 	Code Editor

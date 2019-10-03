@@ -29,7 +29,7 @@ class CodeEditorController extends Controller
      */
     public function index()
     {
-        return View('la.editor.index', [
+        return $this->tenent_view('la.editor.index', [
             'no_header' => true,
             'no_padding' => "no-padding",
             'sidebar_mini' => "sidebar-mini sidebar-collapse"
