@@ -6,7 +6,7 @@ if(\Steve\Laraadmin\Helpers\LAHelper::laravel_ver() >= 5.4) {
 }
 
 Route::group([
-    'namespace'  => 'steve\Laeditor\Controllers',
+    'namespace'  => 'Steve\Laeditor\Controllers',
 	'as' => $as,
     'middleware' => ['web', 'auth', 'permission:ADMIN_PANEL', 'role:SUPER_ADMIN']
 ], function () {
