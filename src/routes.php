@@ -1,12 +1,12 @@
 <?php
 
 $as = "";
-if(\Dwij\Laraadmin\Helpers\LAHelper::laravel_ver() == 5.3) {
+if(\steve\Laraadmin\Helpers\LAHelper::laravel_ver() >= 5.4) {
 	$as = config('laraadmin.adminRoute').'.';
 }
 
 Route::group([
-    'namespace'  => 'Dwij\Laeditor\Controllers',
+    'namespace'  => 'steve\Laeditor\Controllers',
 	'as' => $as,
     'middleware' => ['web', 'auth', 'permission:ADMIN_PANEL', 'role:SUPER_ADMIN']
 ], function () {
