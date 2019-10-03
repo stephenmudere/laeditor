@@ -4,12 +4,12 @@
  * Help: http://laraadmin.com
  */
 
-namespace steve\Laeditor\Commands;
+namespace Steve\Laeditor\Commands;
 
 use Exception;
 use Illuminate\Console\Command;
 use Illuminate\Filesystem\Filesystem;
-use steve\Laraadmin\Helpers\LAHelper;
+use Steve\Laraadmin\Helpers\LAHelper;
 use Eloquent;
 use DB;
 

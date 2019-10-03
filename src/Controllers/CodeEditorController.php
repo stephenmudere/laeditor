@@ -4,7 +4,7 @@
  * Help: http://laraadmin.com
  */
 
-namespace steve\Laeditor\Controllers;
+namespace Steve\Laeditor\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
