@@ -1,8 +1,4 @@
-<?php
-/**
- * Controller genrated using LaraAdmin
- * Help: http://laraadmin.com
- */
+<?php 
 namespace Steve\Laeditor\Controllers;
 
 use App\Http\Controllers\Controller;
@@ -103,3 +99,5 @@ class CodeEditorController extends Controller
         return response()->json(['success' => true]);
     }
 }
+
+ ?>
