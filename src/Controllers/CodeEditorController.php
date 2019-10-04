@@ -3,7 +3,6 @@
  * Controller genrated using LaraAdmin
  * Help: http://laraadmin.com
  */
-
 namespace Steve\Laeditor\Controllers;
 
 use App\Http\Controllers\Controller;
